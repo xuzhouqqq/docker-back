@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+<mycat:schema xmlns:mycat="http://io.mycat/">
+
+	<schema name="ias" checkSQLschema="false" sqlMaxLimit="100">
+     
+	<!-- 2017-10-23 -->
+	<table name="t_room" type="global" dataNode="dn_test0"/>
+	<table name="t_feedback" type="global" dataNode="dn_test0"/>
+	<table name="t_home" type="global" dataNode="dn_test0"/>
+	<table name="t_user" type="global" dataNode="dn_test0"/>
+	<table name="t_home_user" type="global" dataNode="dn_test0"/>
+	<table name="t_device_version" type="global" dataNode="dn_test0"/>
+	<table name="t_device" type="global" dataNode="dn_test0"/>
+	<table name="t_room_device" type="global" dataNode="dn_test0"/>
+	
+  </schema>
+  <!-- test evn -->
+  <dataNode name="dn_test0" dataHost="rwhost0" database="ias"/>
+	<dataHost name="rwhost0" maxCon="1000" minCon="10" balance="3" switchType='1' writeType="0" dbType="mysql" dbDriver="native">
+    <heartbeat>select user()</heartbeat>
+    <!-- can have multi write hosts -->
+      <writeHost host="hostM1" url="172.31.40.116:33306" user="root" password="StarLife2018iot">
+      <readHost host="hostS1" url="172.31.40.116:33307" user="root" password="StarLife2018iot"/>
+    </writeHost>
+  </dataHost>
+</mycat:schema>

@@ -1,0 +1,3 @@
+docker run -d --network host --name redis-sentinel-7700 -v /data/docker/redis/sentinel:/data  -v /etc/localtime:/etc/localtime:ro  redis:3.2.6-alpine sentinel-7700.conf --sentinel
+docker run -d --network host --name redis-sentinel-7800 -v /data/docker/redis/sentinel:/data  -v /etc/localtime:/etc/localtime:ro  redis:3.2.6-alpine sentinel-7800.conf --sentinel
+docker run -d --network host --name redis-sentinel-7900 -v /data/docker/redis/sentinel:/data  -v /etc/localtime:/etc/localtime:ro  redis:3.2.6-alpine sentinel-7900.conf --sentinel

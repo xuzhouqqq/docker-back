@@ -1,0 +1,1 @@
+docker run --name nginx1.11.8 --restart=always -v /data/docker/nginx/conf:/etc/nginx  -v /data/docker/nginx/logs:/var/log/nginx -v /data/docker/nginx/content:/data/docker/nginx/content  -p 80:80 -p 443:443 -d nginx:1.11.8

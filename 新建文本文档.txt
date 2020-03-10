@@ -1,0 +1,12 @@
+    1  adduser juyi
+    2  df -h
+    3  apt-get update
+    4  ifconfig
+    5  apt-get install apt-transport-https ca-certificates
+    6  apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+    7  echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list
+    8  apt-get update
+    9  apt-cache policy docker-engine
+   10  vim /etc/default/docker
+   11  sudo docker ps
+   12  reboot
