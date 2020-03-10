@@ -1,4 +1,4 @@
-    1  adduser juyi
+    1  adduser xuzhou
     2  df -h
     3  apt-get update
     4  ifconfig
